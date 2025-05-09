@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UrbanTaste - Reservations</title>
+  <style>
+    /* Similar to other pages */
+    body {
+      font-family: Arial, sans-serif;
+      color: #333;
+      background-image: url('images/background1.jpg'); /* Add your background image path here */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    header {
+      background-color: rgba(51, 51, 51, 0.7); /* Semi-transparent header */
+      color: #fff;
+      padding: 20px 0;
+    }
+
+    .container {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    header .logo a {
+      font-size: 2rem;
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: flex-end;
+      margin-right: 20px;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.1rem;
+    }
+
+    nav ul li a:hover {
+      color: #f39c12;
+    }
+
+    .reservation-form {
+      padding: 100px 20px;
+      background-color: #fff;
+      text-align: center;
+    }
+
+    .reservation-form h2 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+    }
+
+    .reservation-form form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+    }
+
+    .reservation-form input,
+    .reservation-form select,
+    .reservation-form button {
+      padding: 10px;
+      width: 300px;
+      font-size: 1rem;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .reservation-form button {
+      background-color: #f39c12;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .reservation-form button:hover {
+      background-color: #e67e22;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <div class="container">
+      <h1 class="logo"><a href="index.html">UrbanTaste</a></h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="reservations.html">Reservations</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Reservation Form -->
+  <section class="reservation-form">
+    <h2>Make a Reservation</h2>
+    <form action="https://formspree.io/f/movdwgll" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="tel" name="phone" placeholder="Your Phone Number" required>
+      <select name="date" required>
+        <option value="">Select Date</option>
+        <option value="2025-05-10">May 10, 2025</option>
+        <option value="2025-05-11">May 11, 2025</option>
+        <option value="2025-05-12">May 12, 2025</option>
+      </select>
+      <select name="time" required>
+        <option value="">Select Time</option>
+        <option value="18:00">6:00 PM</option>
+        <option value="19:00">7:00 PM</option>
+        <option value="20:00">8:00 PM</option>
+      </select>
+      <button type="submit">Book Now</button>
+    </form>
+  </section>
+
+  <!-- Success Message (Pop-up via Formspree) -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // The redirect URL is set in Formspree (thank you page) to show a message after success.
+    });
+  </script>
+
+</body>
+</html>

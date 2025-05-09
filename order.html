@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>UrbanTaste - Order Now</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+      background-image: url('images/backgroung.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      margin: 0;
+    }
+
+    header {
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header .logo a {
+      text-decoration: none;
+      font-size: 1.8rem;
+      color: #f39c12;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    nav ul li a:hover {
+      color: #f39c12;
+    }
+
+    .order-section {
+      background-color: rgba(255, 255, 255, 0.95);
+      max-width: 600px;
+      margin: 80px auto;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    .order-section h2 {
+      text-align: center;
+      color: #f39c12;
+    }
+
+    form label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    form input, form textarea, form select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      background-color: #f39c12;
+      border: none;
+      color: white;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #d98200;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <a href="index.html">UrbanTaste</a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="order-section">
+    <h2>Place Your Order</h2>
+    <form action="https://formspree.io/f/movdwgll" method="POST">
+      <label for="fullname">Full Name:</label>
+      <input type="text" id="fullname" name="name" required />
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required />
+
+      <label for="item">What would you like to order?</label>
+      <select id="item" name="item" required>
+        <option value="">--Select Item--</option>
+        <option value="Bunny Chow">Bunny Chow</option>
+        <option value="Shisa Nyama Platter">Shisa Nyama Platter</option>
+        <option value="Pap & Wors Combo">Pap & Wors Combo</option>
+        <option value="Chakalaka Chicken">Chakalaka Chicken</option>
+        <option value="Gatsby Special">Gatsby Special</option>
+        <option value="Vetkoek & Mince">Vetkoek & Mince</option>
+        <option value="Boerewors Roll">Boerewors Roll</option>
+        <option value="Kota with Chips">Kota with Chips</option>
+        <option value="Family Feast (4 Pax)">Family Feast (4 Pax)</option>
+        <option value="Soft Drink 330ml">Soft Drink 330ml</option>
+        <option value="Traditional Mageu">Traditional Mageu</option>
+      </select>
+
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" name="quantity" min="1" required />
+
+      <label for="message">Special Requests or Delivery Address:</label>
+      <textarea id="message" name="message" rows="4" placeholder="e.g. No tomatoes, extra spice, deliver to 45 Zulu St."></textarea>
+
+      <button type="submit">Submit Order</button>
+    </form>
+  </section>
+
+</body>
+</html>
